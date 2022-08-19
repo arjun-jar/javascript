@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./index.js"></script>
+
+</head>
+<body>
+    <form name="myform" style="padding:20px;" id="myForm">
+        <select name="optone" class="selectDD form-control" style="width: 35%;" id="standard" size="1">
+            <option value="" selected="selected">Select statndard</option>
+        </select>
+        <br>
+        <br>
+        <select name="opttwo" class="selectDD form-control" style="width: 35%;" id="edition" size="1">
+            <option value="" selected="selected">Edition and Year</option>
+        </select>
+        <br>
+        <br>
+        <select name="optthree" class="selectDD form-control" style="width: 35%;" id="typeOfJoint" size="1">
+            <option value=""  selected="selected">Type of joint</option>
+        </select>
+
+        <br>
+        <br>
+
+        <select name="optthree" class="selectDD form-control" style="width: 35%;" id="applicable" size="1">
+            <option value=""  selected="selected">Apllicability or Limits </option>
+        </select>
+    </form>
+    <div>
+    <button onclick="jointEfficiency()">submit</button><br><br>
+    <div><input  id="answer" type="text" value="" readonly/></div>
+    </div>
+</body>
+</html>
