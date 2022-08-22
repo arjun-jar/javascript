@@ -1,7 +1,7 @@
 var stateObject = {
     "API 650": {
         "Seventh and Later": [["Butt"],["basic standard","Annex A spot Rt","Annex A no Rt"]],
-        "First to Sixth": [["Butt", "Butt"],["Basic standard","Annexas D and G"]]
+        "First to Sixth": [["Butt"],["Basic standard","Annexes D and G"]]
     },
     "API 12C": {
         "14th and 15th ": [["Butt"],["N/A"]],
@@ -18,22 +18,18 @@ var jointEfficiency =function(){
     if(edition.value.length==0)return
     if(typeOfJoint.value.length==0)return
     if(applicable.value.length==0)return 
-    if(applicable.value==="basic standard"||applicable.value==="Annexas D and G")document.getElementById("answer").value = "1";
-    if(applicable.value==="Annex A spot Rt"||applicable.value==="Basic standard")document.getElementById("answer").value = "0.85";
+    if(applicable.value==="basic standard"&&edition.value==="Seventh and Later")document.getElementById("answer").value = "1";
+    if(applicable.value==="Annex A spot Rt"&&edition.value==="Seventh and Later")document.getElementById("answer").value = "0.85";
     if(applicable.value==="Annex A no Rt")document.getElementById("answer").value = "0.7";
+    if(applicable.value==="Basic standard"&&edition.value==="First to Sixth")document.getElementById("answer").value = "0.85";
+    if(applicable.value==="Annexes D and G")document.getElementById("answer").value = "1";
     if(applicable.value==="N/A")document.getElementById("answer").value = "0.85";
+    if(applicable.value==="3/8 in.max. t")document.getElementById("answer").value = "0.75";
     if(applicable.value==="7/16 in.max. t")document.getElementById("answer").value = "0.7";
     if(applicable.value==="1/4 in.max. t")document.getElementById("answer").value = "0.55";
-    
-if(typeOfJoint.value=="Butt"){
-    if(applicable.value==="N/A")document.getElementById("answer").value = "0.7";
-}
-if(typeOfJoint.value=="Lap_d"){
-    if(applicable.value==="N/A")document.getElementById("answer").value = "0.35";
-}
-
-
-
+    if(applicable.value==="N/A"&&edition.value=="N/A")document.getElementById("answer").value = "0.7";
+    if(typeOfJoint.value=="Lap_d"&&applicable.value==="N/A")document.getElementById("answer").value = "0.35";
+ 
 }
 
 window.onload = function(){
