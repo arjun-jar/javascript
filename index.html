@@ -1,39 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="./index.js"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="./stylesheet.css" rel="stylesheet" />
+    <script src="./index.js" defer></script>
+    <title>MUSIC_APP</title>
+  </head>
+  <div>
+    <div class="container mx-auto  items-center  justify-center	">
+      <h1 class="flex items-center justify-center">MUSIC-APP</h1>
+    <div class="sequencer  ">
+ <div class="kick-track  ">learning
+        <div id="controls">
+          <h1 class="">Kick</h1>
+          <button data-track="0" class="bg-black  w-10 rounded-lg mute kick-volume">
+            <i class="fas fa-volume-mute text-white"></i>
+          </button>
+          <select id="kick-select select" name="kick-select">
+            <option value="./source/kick-classic.wav">kick-classic</option>
+            <option value="./source/kick-heavy.wav">kick-heavy</option>
+            <option value="./source/kick-softy.wav">kick-softy</option>
+            <option value="./source/snare-808.wav">kick-snare</option>
+          </select>
 
-</head>
-<body>
-    <form name="myform" style="padding:20px;" id="myForm">
-        <select name="optone" class="selectDD form-control" style="width: 35%;" id="standard" size="1">
-            <option value="" selected="selected">Select statndard</option>
-        </select>
-        <br>
-        <br>
-        <select name="opttwo" class="selectDD form-control" style="width: 35%;" id="edition" size="1">
-            <option value="" selected="selected">Edition and Year</option>
-        </select>
-        <br>
-        <br>
-        <select name="optthree" class="selectDD form-control" style="width: 35%;" id="typeOfJoint" size="1">
-            <option value=""  selected="selected">Type of joint</option>
-        </select>
+          <div class="kick flex">
+            <div class="pad kick-pad text b0"></div>
+            <div class="pad kick-pad b1"></div>
+            <div class="pad kick-pad b2"></div>
+            <div class="pad kick-pad b3"></div>
+            <div class="pad kick-pad b4"></div>
+            <div class="pad kick-pad b5"></div>
+            <div class="pad kick-pad b6"></div>
+            <div class="pad kick-pad b7"></div>
+          </div>
+        </div>
+      </div>
 
-        <br>
-        <br>
 
-        <select name="optthree" class="selectDD form-control" style="width: 35%;" id="applicable" size="1">
-            <option value=""  selected="selected">Apllicability or Limits </option>
-        </select>
-    </form>
-    <div>
-    <button onclick="jointEfficiency()">submit</button><br><br>
-    <div><input  id="answer" type="text" value="" readonly/></div>
+      <div class="snare-track">
+        <div id="controls">
+          <h1 class="">Snare</h1>
+          <button data-track="1" class="bg-black rounded-lg w-10 mute snare-volume">
+            <i class="fas fa-volume-mute text-white"></i>
+          </button>
+          <select id="snare-select select" name="snare-select">
+            <option value="./source/snare-acoustic01.wav">snare-acoustic</option>
+            <option value="./source/snare-vinyl02.wav">snare-viny</option>
+            <option value="./source/snare-808.wav">snare-808</option>
+          </select>
+
+          <div class="snare flex">
+            <div class="pad snare-pad b0"></div>
+            <div class="pad snare-pad b1"></div>
+            <div class="pad snare-pad b2"></div>
+            <div class="pad snare-pad b3"></div>
+            <div class="pad snare-pad b4"></div>
+            <div class="pad snare-pad b5"></div>
+            <div class="pad snare-pad b6"></div>
+            <div class="pad snare-pad b7"></div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="hihat-track ">
+        <div id="controls">
+          <h1 class="">hihat</h1>
+          <button data-track="2" class="mute rounded-lg bg-black  w-10 hihat-volume"> <i class="fas fa-volume-mute text-white"></i>  </button>
+          <select id="hihat-select select" name="hihat-select">
+            <option value="./source/hihat-acoustic01.wav"> hihat-acoustic  </option>
+            <option value="./source/hihat-808.wav">hihat-808</option>
+          </select>
+          <div class="hihat flex">
+            <div class="pad hihat-pad b0"></div>
+            <div class="pad hihat-pad b1"></div>
+            <div class="pad hihat-pad b2"></div>
+            <div class="pad hihat-pad b3"></div>
+            <div class="pad hihat-pad b4"></div>
+            <div class="pad hihat-pad b5"></div>
+            <div class="pad hihat-pad b6"></div>
+            <div class="pad hihat-pad b7"></div>
+          </div>
+        </div>
+      </div>
     </div>
-</body>
+  </div>
+  
+  <div class="flex justify-center items-center gap-3  lg:w-[70rem] mt-[2rem]">
+    <button class="toggling border border-blue-500 text-white  w-32  rounded-lg bg-gray-900 hover:bg-white hover:text-black">TOGGLE</button>
+    <button class="play border border-blue-500 text-white  w-36  rounded-lg bg-gray-900 hover:bg-white hover:text-black">PLAY</button>
+    <input class="inputs" class="w-40"></input> 
+  </div>
+  <audio class="kick-audio" src="./source/kick-classic.wav"></audio>
+  <audio class="snare-audio" src="./source/snare-acoustic01.wav"></audio>
+  <audio class="hihat-audio" src="./source/hihat-acoustic01.wav"></audio>
+
+  </div>
+
+
+  </body>
 </html>
