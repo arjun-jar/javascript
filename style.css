@@ -1,0 +1,117 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+ 
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    flex-direction: column;
+}
+header h1 {
+    padding: 2rem;
+}
+ 
+#logo{
+    text-decoration: none;
+    color: black;
+}
+#logo:hover{
+    text-decoration:underline;
+}
+.search-form{
+    display: flex;
+    padding: 2rem;
+}
+.search-form input{
+    border-radius: 1rem;
+    font-size: 1rem;
+    padding: 0.3rem;
+    width: 20rem;
+    border: none;
+    border :2px solid rgb(58, 58, 99);
+}
+.submit-button{
+    border-radius: 1rem;
+    cursor: pointer;
+    border :2px solid rgb(58, 58, 99);
+    margin-left: 10px;
+    padding:1rem; 
+    background-color: rgb(58, 58, 99);
+    color: white;
+    font-weight: bold;
+}
+.submit-button:hover{
+    background-color: white;
+    font-weight: bold;
+    color: black;
+    
+}
+.gallery{
+    width: 80%;
+    margin: auto;
+display: grid;
+grid-template-columns: repeat(auto-fill,minmax(350px,1fr));
+padding: 2rem 0;
+row-gap: 5rem;
+column-gap: 3rem;
+}
+.gallery,img{
+    height: 100%;
+    width: 100%;
+}
+.nav-button{
+    min-height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.more{
+    cursor: pointer;
+    padding:1rem 3rem ; 
+    color: white;
+    background-color: rgb(58, 58, 99); border :2px solid rgb(58, 58, 99);
+}
+.more:hover{
+    background-color: white;
+    font-weight: bold;
+    color: black;
+    
+}
+.image-gallery{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+    padding: 1rem;
+}
+.image-gallery,a{
+    text-decoration: none;
+    
+
+}
+.image-gallery a:hover{
+    text-decoration: underline;
+}
+.img-btn{
+background-color: rgb(58, 58, 99);
+border :2px solid rgb(58, 58, 99);
+cursor: pointer;
+border-radius: 5px;
+padding: .2rem;
+}
+.img-btn:hover{
+    background-color: rgb(255, 255, 255);
+    border :2px solid rgb(58, 58, 99);
+ }
+
+.img-btn a{
+color:white;
+padding:.8rem;
+}
+.img-btn a:hover{
+    color:rgb(2, 2, 2);
+    }
